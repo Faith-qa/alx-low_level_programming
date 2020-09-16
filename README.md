@@ -1,0 +1,1 @@
+this is the begining of my experience with C programming. In this file are the key steps I took to develop my skillset
