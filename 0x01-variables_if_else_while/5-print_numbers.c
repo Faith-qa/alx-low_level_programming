@@ -5,6 +5,11 @@
 #define NUMBER 0
 #define LIMIT 10
 
+/**
+ *main- single digit numbers to base1 10
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
