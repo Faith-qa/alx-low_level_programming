@@ -22,9 +22,9 @@ if (!(a == 9 && b == 9))
 putchar(',');
 putchar(' ');
 }
- b++;
+b++;
 }
- a++;
+a++;
 }
 return (0);
 }
