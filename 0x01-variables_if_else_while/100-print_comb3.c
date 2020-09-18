@@ -16,7 +16,7 @@ b = 0;
 while (b < 10)
 {
 putchar('0' + a);
-putchar('o' + b);
+putchar('0' + b);
 if (!(a == 9 && b == 9))
 {
 putchar(',');
