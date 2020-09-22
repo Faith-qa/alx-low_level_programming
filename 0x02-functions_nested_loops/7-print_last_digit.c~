@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+/**
+ * print_last_digit - return last digit
+ * @b : number to check
+ * Return:0 or 1
+ */
+
+int print_last_digit(int b)
+{
+int bc;
+if (b < 0)
+{
+bc = -1 *b % 10;
+_putchar(bc + '0');
+return (bc);
+}
+else
+{
+bc = b % 10;
+_putchar(bc + '0');
+return (bc);
+}
+}
