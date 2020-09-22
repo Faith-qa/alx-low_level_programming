@@ -1,24 +1,19 @@
 #include "holberton.h"
 /**
-*main - print 10 times alphabet
-*Return: Always  0 (success)
+*print_alphabet_10  - print 10 times alphabet
+*
 */
-int main(void)
+
+void print_alphabet_10(void)
 {
-void print_alphabet_10(void);
 int i;
 char c;
-i = 0;
-while (i <= 10)
+for (i = 0; i <= 10; i++)
 {
-c = 'a';
-while (c <= 'z')
+for (c = 'a'; c <= 'z'; c++)
 {
 _putchar(c);
+}
 _putchar('\n');
-c++;
 }
-i++;
-}
- return(0);
 }
