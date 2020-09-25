@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *main - print numbers 1 to 100
- *Return : Always (0) auccess
+ *main - Entry point. Print numbers 1 to 100
+ *Return: Always 0 (Success)
  *
  */
 
@@ -27,7 +27,7 @@ else
 printf("%d", multiples);
 if (multiples < 100)
 {
-  putchar(' ');
+putchar(' ');
 }
 }
 putchar('\n');
