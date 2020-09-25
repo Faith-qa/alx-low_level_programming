@@ -9,7 +9,7 @@
 int main(void)
 {
 int multiples;
-for (multiples = 0; multiples <= 100; multiples++)
+for (multiples = 1; multiples <= 100; multiples++)
 {
 if ((multiples % 3 == 0) && (multiples % 5 == 0))
 {
