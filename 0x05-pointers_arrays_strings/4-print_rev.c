@@ -6,19 +6,14 @@
  */
 void print_rev(char *s)
 {
-	int x; /**forward*/
-	int y; /**reverse/backward*/
-	int l ; /**length*/
-
-	for (x = 0; s[x] != '\0'; x++)
-	{
-		l = x;
-	}
-	y = 0;
-	for (; l >= y; l--)
-	{
-		_putchar(s[l]);
-	}
-	_putchar('\n');
-
+int x; /**forward*/
+int y; /**reverse/backward*/
+for (x = 0; s[x] != '\0'; x++)
+{
+}
+for (y = x - 1; y >= s[x]; y--)
+{
+_putchar(s[y]);
+}
+_putchar('\n');
 }
