@@ -18,5 +18,4 @@ for (; l >= y; l--)
 {
 _putchar(s[l]);
 }
-_putchar('\n');
 }
