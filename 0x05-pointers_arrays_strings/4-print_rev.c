@@ -8,12 +8,15 @@ void print_rev(char *s)
 {
 int x; /**forward*/
 int y; /**reverse/backward*/
+ int l ; /**length*/
 for (x = 0; s[x] != '\0'; x++)
 {
+l = x;
 }
-for (y = x - 1; y >= s[x]; y--)
+y = 0;
+for (; l >= y; l--)
 {
-_putchar(s[y]);
-_putchar('\n');
+_putchar(s[l]);
 }
+_putchar('\n');
 }
