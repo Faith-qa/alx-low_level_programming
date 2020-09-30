@@ -21,7 +21,7 @@ _putchar(str[start]);
 }
 else
 {
-  for (start = ((len - 1) / 2) + 1; start <= len; start++)
+for (start = ((len - 1) / 2) + 1; start <= len; start++)
 {
 _putchar(str[start]);
 }
