@@ -1,0 +1,6 @@
+#ifndef HOLBERTON.H
+#define HOLBERTON.H
+
+char *_strcat(char *dest, char *src);
+
+#endif

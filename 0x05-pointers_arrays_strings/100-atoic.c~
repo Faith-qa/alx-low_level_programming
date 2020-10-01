@@ -1,0 +1,23 @@
+#include "holberton.h"
+/**
+ *_atoi - converts strint to int
+ *@s: char integer entered
+ *Description: takes all types of characters
+ *Return: Always (0) Success
+ */
+int_atoi(char *s)
+{
+int a = 0; /** a = results*/
+int b = 1; /** b = signs*/
+int i = o;
+if (s[0] == '-'
+{
+b = -1;
+i++;
+}
+for (; s[i] != '\0'; i++)
+{
+a = a * 10 + s[i] - '0';
+}
+  return (b *a);
+}
