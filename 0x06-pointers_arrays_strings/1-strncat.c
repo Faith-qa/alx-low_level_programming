@@ -19,10 +19,10 @@ a++;
 b = 0;
 while (b < n && src[b] != '\0')
 {
-b++;
+dest[a] = src[b];
 a++;
-dest[a + b] = src[b];
+b++;
 }
-dest[a + b] = '\0';
+dest[a] = '\0';
 return (dest);
 }
