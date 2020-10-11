@@ -19,4 +19,3 @@ argv[i] = argv[i];
 printf("%d\n", i - 1);
 return (0);
 }
-  
