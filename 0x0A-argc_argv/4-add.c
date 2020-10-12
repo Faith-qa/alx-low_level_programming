@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	int x;
 	int sum;
 	int zero = 0;
+	int i = 1;
 	char error[10] = "Error";
 
 
@@ -21,6 +22,15 @@ int main(int argc, char *argv[])
 	{
 		printf("%d\n", zero);
 		return (0);
+	}
+	while (i < argc - 1)
+	{
+		if (isdigit(atoi(argv[i])) == 0)
+		{
+			printf("%s\n", error);
+			return (-1);
+		}
+		i++;
 	}
 
 	for (x = 0; x < argc; x++)
