@@ -11,43 +11,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int x;
-	int sum;
-	int zero = 0;
-	int i = 1;
-	char error[10] = "Error";
+int i, j, sum;
+sum = 0;
 
-
-	if (argc == 1)
-	{
-		printf("%d\n", zero);
-		return (0);
-	}
-	while (i < argc - 1)
-	{
-		if (isdigit(atoi(argv[i])) == 0)
-		{
-			printf("%s\n", error);
-			return (-1);
-		}
-		i++;
-	}
-
-	for (x = 0; x < argc; x++)
-	{
-		if (x > 0)
-		{
-			if (atoi(argv[x]) == 0)
-			{
-				printf("%s\n", error);
-				return (1);
-			}
-
-			sum += atoi(*(argv + x));
-		}
-	}
-
-	printf("%d\n", sum);
-
-	return (0);
+for (i = 1; i < argc; i++)
+{
+for (j = 0; argv[i][j] != '\0'; j++)
+{
+if (!isdigit(argv[i][j]))
+{
+return (puts("Error"), 1);
+}
+}
+sum += atoi(argv[i]);
+}
+return (printf("%d\n", sum), 0);
 }
