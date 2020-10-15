@@ -1,0 +1,41 @@
+#include "holberton.h"
+#include <stdlib.h>
+/**
+ *str_concat - concatenates 2 strings
+ *@s1: string 1
+ *@s2: string 2
+ *Return: Null
+ */
+char *str_concat(char *s1, char *s2)
+{
+	int size_a = 0, size_b = 0, size_c = 0, a, b, copya, copyb;
+	char *strcon;
+	if(s1 == NULL)
+		s1 = "";
+	if (s1 == NULL)
+		s2 = "";
+
+	for (a = 0; s1[a] != '\0'; a++)
+	{
+		size_a++;
+	}
+	for (b = 0; s2[b] != '0'; b++)
+	{
+		size_b++;
+	}
+	size_b += 1;
+	size_c = size_b + size_a;
+
+	strcon = malloc(sizeof(char) * size_c);
+	if (strcon == NULL)
+		return (NULL);
+	for (copya = a; s1[copya] != '\0'; copya++)
+	{
+		strcon[copya] = s1[copya];
+	}
+	for (copyb = b; s2[copyb] != '\0'; copyb++)
+	{
+		strcon[copyb] = s2[copyb];
+	}
+	return (strcon);
+}
