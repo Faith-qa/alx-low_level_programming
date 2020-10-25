@@ -10,10 +10,11 @@
 
 void print_strings(const char *seperator, const unsigned int n, ...)
 {
-  va_list nlist;
+	va_list nlist;
 	unsigned int i;
 	char *p;
-	va_start(nlist, n);	
+
+	va_start(nlist, n);
 
 	for (i = 0; i < n; i++)
 	{
@@ -27,6 +28,6 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		else
 			printf("%s", seperator);
 	}
-	va_end (nlist);
+	va_end(nlist);
 	printf("\n");
 }
