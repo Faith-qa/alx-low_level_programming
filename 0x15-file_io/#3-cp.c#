@@ -1,0 +1,77 @@
+#include "holberton.h"
+#define BUFFER_SIZE 1024
+
+/**
+ *main - transfers file content
+ @argc: argument count
+ @argv: argument vector
+ *arguments supplied
+ *Return; 0 on success, Error on failure
+ */
+
+int main(int argc, char **argv)
+{
+	int ff, ft, rv, wv;
+	/**ff-file from, ft - file_to, rv - read_value, wv- write value*/
+	char *buffer[BUFFER_SIZE];
+
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp ff ft\n"),
+			exit(97);
+
+	}
+	if (argv[1] == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+
+	}
+	if (argv[2] == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+			exit(99);
+	}
+	ff = open(argv[1], O_RDONLY);
+	ft = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	rv = read(ff, buffer, BUFFER_SIZE);
+
+	if (rv == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+			exit(98);
+	}
+
+	while (rv != 0)
+	{
+		wv = write(ft, buffer, rv);
+		if (wv == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]),
+				exit(99);
+		}
+
+		rv = read(ff, buffer, BUFFER_SIZE);
+
+		if (rv  == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),
+				exit(98);
+		}
+	}
+	ff = close(ff);
+
+	if (ff == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff),
+			exit(100);
+	}
+	ft = close(ft);
+
+	if (ft == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft),
+			exit(100);
+	}
+	return (0);
+}
