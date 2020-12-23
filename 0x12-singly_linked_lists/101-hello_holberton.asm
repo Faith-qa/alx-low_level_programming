@@ -1,7 +1,7 @@
 global main
 	section .text
 	
-main:
+main:	
 	mov rdi, 1		;to the standard output
 	mov rsi, message	;message to print
 	mov rdx, 17     	;size of text to print
