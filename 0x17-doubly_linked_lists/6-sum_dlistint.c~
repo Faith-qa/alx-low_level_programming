@@ -1,0 +1,20 @@
+#include "lists.h"
+/**
+ *sum_dlistint -returns sum of all data
+ *@head: pointer to the first element
+ *Return: 0 if list is empty
+ */
+
+int sum_dlistint(dlistint_t *head)
+{
+  int sum = 0;
+  dlistint_t *temp = head;
+
+  while  (head == NULL)
+    {
+      sum += temp->n;
+      temp = temp->next;
+      sum++;
+    }
+  return (sum);
+}
