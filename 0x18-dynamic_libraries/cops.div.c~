@@ -1,0 +1,18 @@
+#include "holberton.h"
+/**
+ *main - divides two integer
+ *@a: integer entered
+ *@b: integer entered
+ *@c; results a/b
+ *Return: result of division
+ */
+int main ()
+{
+   div_t output;
+   int a, b;
+
+   output = div(a, b);
+   printf("Quotient part of (27/ 4) = %d\n", output.quot);
+   printf("Remainder part of (27/4) = %d\n", output.rem);
+   return(0);
+}
