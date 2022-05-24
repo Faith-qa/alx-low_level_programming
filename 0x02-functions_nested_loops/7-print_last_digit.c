@@ -1,24 +1,17 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_last_digit - Print the last digit in a vlaue
- * @i: Intereger to be entered
- * Return: Returns the last digit of n
- *
+ * pint_last_digit- prints the last digit of number
+ * Return: the last digit
  */
-
-int print_last_digit(int i)
+int print_last_digit(int n)
 {
+    int last_dit = n % 10;
 
-int last_num;
-
-if (i < 0)
-{
-last_num = (i % 10) * -1;
-}
-else
-{
-last_num = i % 10;
-}
-_putchar ('0' + last_num);
-return (last_num);
+    if (n < 0)
+    {
+        last_dit = last_dit * -1;
+    }
+    _putchar(last_dit + '\0');
+    return (last_dit);
 }
